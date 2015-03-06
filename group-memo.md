@@ -1,15 +1,3 @@
-## 著者名を記載
-
-URL:https://github.com/Fermithrax77/Fermithrax77-readable-code/blob/master/SamplePJ/src/issue/RecipeOut.java
-```
-/*
-
-author A.Kajiie */ public class RecipeOut {
-}
-```
-
-理由：これは誰が書いたコードかモヤモヤせずに読める！！
-
 ## 引数などの説明がコメントで書いてある
 
 URL: https://github.com/Takajin/szkayeah-readable-code/commit/d1a13d580d2bffec76ede3b9d7aba4194e68f67d
@@ -24,6 +12,26 @@ URL: https://github.com/Takajin/szkayeah-readable-code/commit/d1a13d580d2bffec76
 ```
 
 理由: INとOUTが書かれていると、何をしてくれるメソッドなのかがわかるから。
+
+## これからの実装方針の記載
+
+https://github.com/Fermithrax77/WanatanabeKouji-readable-code/blob/master/src/order1.java
+
+// メインメソッド // 極力何も書きたくない
+
+理由：これから何をしたいのかわかる！！
+
+## 著者名を記載
+
+URL:https://github.com/Fermithrax77/Fermithrax77-readable-code/blob/master/SamplePJ/src/issue/RecipeOut.java
+```
+/*
+
+author A.Kajiie */ public class RecipeOut {
+}
+```
+
+理由：これは誰が書いたコードかモヤモヤせずに読める！！
 
 ## メソッドの役割と引数の説明を記載
 
@@ -68,6 +76,24 @@ List<String> recipes = readRecipeFile();
 
 理由：複数の要素を保持していることが明確
 
+## メソッド名を処理内容に関係した名前にする
+
+showStringAndReadRecipe(File recipe)
+
+理由：どんな処理のメソッドかすぐわかる！！
+
+## 変数名を役割の名前にする
+
+java.io.BufferedReader buffer = new BufferedReader(new FileReader(recipeFile));
+
+String recipe_data= buffer.readLine();
+
+理由：一目みてバッファーであることがわかる。ほかのとこで変数を利用していてもわかりやすい！
+
+## 変数名のつけかた
+　コード：menuList、menu
+　理由：List型要素の変数の末尾にListが付いている。取り出した個々の要素はListを外した変数名になっている。
+
 ## イテレーションの範囲が明確
 
 ファイル：https://github.com/WatanabeKouji/Fermithrax77-readable-code/blob/master/SamplePJ/src/issue/RecipeOut.java
@@ -86,39 +112,7 @@ List<String> recipes = readRecipeFile();
 
 理由: 全体を通して、ネストが低いからよみやすいのかな？
 
-## メソッドの役割と引数の説明を記載
+## データ読込処理を外だしにしている(機能の分離)
+　コード：createMenuList()
+　理由：読込部分を改修する時にmainに影響を出さずに済む。
 
-```
-/*
- * recipe-data.txtを読み込んでレシピを出力するメソッド
- *
- * return ファイルから読み込んだ全てのデータ
- *
- */
- static public List<String> readRecipeFile() {
- }
-```
-
-理由：メソッドの中を読まなくてもどんな処理のメソッドかわかる！！
-
-## これからの実装方針の記載
-
-https://github.com/Fermithrax77/WanatanabeKouji-readable-code/blob/master/src/order1.java
-
-// メインメソッド // 極力何も書きたくない
-
-理由：これから何をしたいのかわかる！！
-
-## メソッド名を処理内容に関係した名前にする
-
-showStringAndReadRecipe(File recipe)
-
-理由：どんな処理のメソッドかすぐわかる！！
-
-## 変数名を役割の名前にする
-
-java.io.BufferedReader buffer = new BufferedReader(new FileReader(recipeFile));
-
-String recipe_data= buffer.readLine();
-
-理由：一目みてバッファーであることがわかる。ほかのとこで変数を利用していてもわかりやすい！

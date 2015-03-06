@@ -88,6 +88,7 @@ List<String> recipes = readRecipeFile();
 
 ## メソッドの役割と引数の説明を記載
 
+```
 /*
  * recipe-data.txtを読み込んでレシピを出力するメソッド
  *
@@ -96,6 +97,8 @@ List<String> recipes = readRecipeFile();
  */
  static public List<String> readRecipeFile() {
  }
+```
+
 理由：メソッドの中を読まなくてもどんな処理のメソッドかわかる！！
 
 ## これからの実装方針の記載

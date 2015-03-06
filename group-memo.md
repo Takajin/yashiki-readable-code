@@ -78,15 +78,19 @@ List<String> recipes = readRecipeFile();
 
 ## メソッド名を処理内容に関係した名前にする
 
+```
 showStringAndReadRecipe(File recipe)
+```
 
 理由：どんな処理のメソッドかすぐわかる！！
 
 ## 変数名を役割の名前にする
 
+```
 java.io.BufferedReader buffer = new BufferedReader(new FileReader(recipeFile));
 
 String recipe_data= buffer.readLine();
+```
 
 理由：一目みてバッファーであることがわかる。ほかのとこで変数を利用していてもわかりやすい！
 
